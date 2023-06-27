@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import '../models/transaction.model.dart';
-import 'transaction_service.interface.dart';
+import '../../models/transaction.model.dart';
+import '../../interfaces/transaction_service.interface.dart';
 
 class TransactionApiService implements TransactionService {
   @override

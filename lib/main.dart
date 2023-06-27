@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'app features/screens/transactions_list.screen.dart';
-import 'infrastructure features/services/transaction_api.service.dart';
-import 'infrastructure features/viewmodels/transaction_viewmodel.vm.dart';
+import 'app features/transaction/screens/transactions_list.screen.dart';
+import 'infrastructure features/transaction/services/api/transaction_api.service.dart';
+import 'infrastructure features/transaction/viewmodels/transaction_viewmodel.vm.dart';
 
 void main() {
   runApp(TransactionApp());

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/transaction.model.dart';
 import '../providers/transaction.provider.dart';
-import '../services/transaction_service.interface.dart';
+import '../interfaces/transaction_service.interface.dart';
 
 class TransactionListViewModel extends ChangeNotifier
     implements TransactionProvider {
@@ -40,7 +40,9 @@ class TransactionListViewModel extends ChangeNotifier
     _filteredTransactions = _transactions
         .where((transaction) =>
     transaction.description.contains(searchTerm) ||
-        transaction.type.contains(searchTerm))
+        transaction.type.contains(searchTerm) ||
+        transaction.formattedDate.contains(searchTerm)
+    )
         .toList();
     notifyListeners();
   }

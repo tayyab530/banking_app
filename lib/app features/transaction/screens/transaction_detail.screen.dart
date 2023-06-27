@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../infrastructure features/models/transaction.model.dart';
+import '../../../infrastructure features/transaction/models/transaction.model.dart';
 
 class TransactionDetailsScreen extends StatelessWidget {
   final Transaction transaction;
