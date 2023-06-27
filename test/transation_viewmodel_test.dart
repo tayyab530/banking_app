@@ -1,6 +1,6 @@
-import 'package:banking_app/infrastructure%20features/models/transaction.model.dart';
-import 'package:banking_app/infrastructure%20features/services/transaction_service.interface.dart';
-import 'package:banking_app/infrastructure%20features/viewmodels/transaction_viewmodel.vm.dart';
+import 'package:banking_app/infrastructure%20features/transaction/interfaces/transaction_service.interface.dart';
+import 'package:banking_app/infrastructure%20features/transaction/models/transaction.model.dart';
+import 'package:banking_app/infrastructure%20features/transaction/viewmodels/transaction_viewmodel.vm.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -9,8 +9,6 @@ import 'transation_viewmodel_test.mocks.dart';
 
 // Annotation which generates the cat.mocks.dart library and the MockCat class.
 @GenerateNiceMocks([MockSpec<TransactionService>()])
-
-// class MockTransactionService extends Mock implements TransactionService {}
 
 void main() {
   group('TransactionListViewModel', () {
@@ -73,8 +71,7 @@ void main() {
 
     test('filterTransactions', () {
       // Arrange
-      const searchTerm = 'invoice';
-
+      const searchTerm = 'Hello';
 
       // Act
       viewModel.filterTransactions(searchTerm);
